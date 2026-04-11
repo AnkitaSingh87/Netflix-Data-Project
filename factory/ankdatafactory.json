@@ -1,0 +1,9 @@
+{
+	"name": "ankdatafactory",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "57aa3c47-016a-47ea-93bd-b2176daca52a",
+		"tenantId": "32df95f0-c58c-4d67-a376-0174ba97d854"
+	}
+}
