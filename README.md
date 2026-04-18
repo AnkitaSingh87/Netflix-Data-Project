@@ -2,69 +2,73 @@
 **Netflix Data Project**
 ------------------------------
 
-📌 Overview
+**📌 Overview**
 
 This project demonstrates an end-to-end ETL pipeline for Netflix data using Azure Data Factory (ADF) for ingestion, Databricks Delta Live Tables (DLT) for transformation, and Power BI for visualization. The goal is to showcase a modern cloud-based data engineering workflow that ingests raw data, processes it into curated layers, and enables business insights.
 
-🚀 Architecture
+**🚀 Architecture**
 
 1. Data Ingestion (Azure Data Factory)
+   
 
-Raw Netflix dataset ingested from source into Azure Data Lake.
+<img width="800" height="400" alt="Screenshot 2026-04-11 153543" src="https://github.com/user-attachments/assets/937f7586-e698-4916-9854-fdee34822973" />
 
-Pipelines orchestrated in ADF with linked services and datasets.
 
-Publish configuration managed via publish_config.json.
+
+
+
+--Raw Netflix dataset ingested from source into Azure Data Lake.
+
+--Pipelines orchestrated in ADF with linked services and datasets.
+
+--Publish configuration managed via publish_config.json.
 
 2. Data Transformation (Databricks + Delta Live Tables)
 
-Raw data validated and cleaned using PySpark scripts (spark_scripts.dbc).
 
-Implemented Medallion Architecture:
+ <img width="800" height="400" alt="Screenshot 2026-04-12 170843" src="https://github.com/user-attachments/assets/089e140b-6be5-45f1-a6e7-d39a03330894" />
 
-Bronze Layer: Raw ingestion.
 
-Silver Layer: Cleaned and deduplicated data.
+--Raw data validated and cleaned using PySpark scripts (spark_scripts.dbc).
 
-Gold Layer: Aggregated and business-ready tables.
+--Implemented Medallion Architecture:
 
-Applied transformations such as:
+   Bronze Layer: Raw ingestion.
 
-Schema enforcement
+   Silver Layer: Cleaned and deduplicated data.
 
-Deduplication
+   Gold Layer: Aggregated and business-ready tables.
+   
 
-Data quality checks
+  <img width="800" height="400" alt="Screenshot 2026-04-18 190230" src="https://github.com/user-attachments/assets/4c5daa81-cad5-43d7-a7a9-93e13b2189ee" />
 
-Ranking and categorization
+
+
+   Applied transformations such as:
+
+   Schema enforcement
+
+   Deduplication
+
+   Data quality checks
+
+   Ranking and categorization
+   
 
 3. Data Storage (Delta Lake)
 
-Data stored in Delta Lake tables for ACID transactions and scalable queries.
+--Data stored in Delta Lake tables for ACID transactions and scalable queries.
 
-Checkpointing and streaming enabled for reliability.
+--Checkpointing and streaming enabled for reliability.
 
 4. Visualization (Power BI)
 
-Curated Gold layer exposed to Power BI.
+--Curated Gold layer exposed to Power BI.
 
-Dashboards built to analyze Netflix content trends, genres, and performance metrics.
+--Dashboards built to analyze Netflix content trends, genres, and performance metrics.
 
-📂 Repository Structure
 
-Raw Data/ → Contains raw Netflix dataset.
-
-factory/ → Azure Data Factory pipeline definitions.
-
-linkedService/ → Linked service configurations.
-
-pipeline/ → Pipeline JSON definitions.
-
-spark_scripts.dbc → Databricks notebooks for transformations.
-
-publish_config.json → Deployment configuration for ADF.
-
-⚙️ Technologies Used
+**⚙️ Technologies Used**
 
 Azure Data Factory (ADF) – Orchestration and ingestion.
 
@@ -76,7 +80,8 @@ Power BI – Visualization and reporting.
 
 PySpark – Data processing and ETL logic.
 
-📊 Key Features
+
+**📊 Key Features**
 
 End-to-end cloud ETL pipeline.
 
@@ -88,21 +93,8 @@ Integration with Power BI for insights.
 
 Modular and reusable pipeline design.
 
-🛠️ How to Run
 
-Clone the repository:
-
-git clone https://github.com/AnkitaSingh87/Netflix-Data-Project.git
-
-Deploy ADF pipelines using factory/ and pipeline/ JSON files.
-
-Import spark_scripts.dbc into Databricks workspace.
-
-Configure Delta Live Tables for Bronze, Silver, and Gold layers.
-
-Connect Power BI to Gold layer tables for visualization.
-
-📈 Business Impact
+**📈 Business Impact**
 
 Enables data-driven insights into Netflix content trends.
 
