@@ -1,5 +1,6 @@
 
-Netflix Data Project
+**Netflix Data Project**
+------------------------------
 
 📌 Overview
 
